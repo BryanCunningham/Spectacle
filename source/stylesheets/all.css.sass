@@ -14,9 +14,122 @@ img
   max-width: 960px
   margin: auto
 
-header
-  width: 80%
+.macbook
+  background: url(/images/macbook.png)
+  background-size: 100%
+  width: 678px
+  height: 398px
   margin: 40px auto 20px
+  position: relative
+
+.monitor
+  position: absolute
+  top: 23px
+  left: 91px
+
+.screen
+  position: absolute
+  width: 496px
+  height: 310px
+  opacity: 0
+  +animation (12s .25s infinite)
+
+.whole
+  background: url(/images/whole.png)
+  background-size: 100%
+  +animation-name (fade)
+
+.center
+  background: url(/images/center.png)
+  +animation-name (fade2)
+  background-size: 100%
+
+.top
+  background: url(/images/top.png)
+  +animation-name (fade3)
+  background-size: 100%
+
+.bottom
+  background: url(/images/bottom.png)
+  +animation-name (fade4)
+  background-size: 100%
+
+.left
+  background: url(/images/left.png)
+  +animation-name (fade5)
+  background-size: 100%
+
+.right
+  background: url(/images/right.png)
+  +animation-name (fade6)
+  background-size: 100%
+
++keyframes (fade)
+  0%
+    opacity: 1
+  16%
+    opacity: 1
+  17%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes (fade2)
+  0%
+    opacity: 0
+  16%
+    opacity: 1
+  32%
+    opacity: 1
+  33%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes (fade3)
+  0%
+    opacity: 0
+  32%
+    opacity: 1
+  48%
+    opacity: 1
+  49%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes (fade4)
+  0%
+    opacity: 0
+  48%
+    opacity: 1
+  64%
+    opacity: 1
+  65%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes (fade5)
+  0%
+    opacity: 0
+  64%
+    opacity: 1
+  82%
+    opacity: 1
+  83%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes (fade6)
+  0%
+    opacity: 0
+  82%
+    opacity: 1
+  100%
+    opacity: 1
+
 
 h1, h2, h3, footer
   text-align: center

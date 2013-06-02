@@ -5,6 +5,13 @@
 
 body
   color: #333
+  +animation (load 2s)
+
++keyframes (load)
+  0%
+    opacity: 0
+  20%
+    opacity: 0
 
 img
   max-width: 100%
@@ -32,7 +39,7 @@ img
   width: 496px
   height: 310px
   opacity: 0
-  +animation (12s .25s infinite)
+  +animation (12s infinite)
 
 .whole
   background: url(/images/whole.png)

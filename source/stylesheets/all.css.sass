@@ -17,26 +17,44 @@ img
   max-width: 100%
 
 .container
-  width: 100%
+  width: 90%
   max-width: 960px
   margin: auto
 
 .macbook
-  background: url(/images/macbook.png)
+  background: url(/images/macbook.png) no-repeat
   background-size: 100%
   width: 678px
   height: 398px
   margin: 40px auto 20px
   position: relative
 
+  @media (max-width: 748px)
+    width: 540px
+    height: 320px
+
+  @media (max-width: 620px)
+    width: 280px
+    height: 175px
+
+
 .monitor
   position: absolute
   top: 23px
   left: 91px
+  background-size: inherit
+
+  @media (max-width: 748px)
+    top: 20px
+    left: 72px
+
+  @media (max-width: 620px)
+    top: 10px
+    left: 38px
 
 .glare
-  background: url(/images/glare.png)
-  background-size: 100%
+  background: url(/images/glare.png) no-repeat
+  background-size: inherit
   width: 227px
   height: 321px
   position: absolute
@@ -44,42 +62,59 @@ img
   top: 3px
   z-index: 1
 
+  @media (max-width: 748px)
+    width: 157px
+    height: 274px
+    right: 60px
+
+  @media (max-width: 620px)
+    width: 90px
+    right: 31px
+    top: 1px
+
 .screen
   position: absolute
   width: 496px
   height: 310px
   opacity: 0
+  background-repeat: no-repeat
   +animation (12s infinite)
 
+  @media (max-width: 748px)
+    width: 396px
+
+  @media (max-width: 620px)
+    width: 205px
+
 .whole
-  background: url(/images/whole.png)
-  background-size: 100%
+  background-image: url(/images/whole.png)
+  background-size: inherit
   +animation-name (fade)
 
 .center
-  background: url(/images/center.png)
+  background-image: url(/images/center.png)
   +animation-name (fade2)
-  background-size: 100%
+  background-size: inherit
 
 .top
-  background: url(/images/top.png)
+  background-image: url(/images/top.png)
   +animation-name (fade3)
-  background-size: 100%
+  background-size: inherit
 
 .bottom
-  background: url(/images/bottom.png)
+  background-image: url(/images/bottom.png)
   +animation-name (fade4)
-  background-size: 100%
+  background-size: inherit
 
 .left
-  background: url(/images/left.png)
+  background-image: url(/images/left.png)
   +animation-name (fade5)
-  background-size: 100%
+  background-size: inherit
 
 .right
-  background: url(/images/right.png)
+  background-image: url(/images/right.png)
   +animation-name (fade6)
-  background-size: 100%
+  background-size: inherit
 
 +keyframes (fade)
   0%
@@ -155,6 +190,14 @@ h1
   font-size: 3.9em
   margin-bottom: 14px
 
+  @media (max-width: 620px)
+    font-size: 3.2em
+
+  @media (max-width: 399px)
+    font-size: 2.2em
+    border-bottom: 1px solid #1f75aa
+    padding-bottom: 15px
+
   span
     color: #1f75aa
     font-weight: bold
@@ -162,6 +205,13 @@ h1
 h2
   font-size: 1.8em
   margin-bottom: 32px
+
+  @media (max-width: 748px)
+    font-size: 1.4em
+    margin-top: 20px
+
+  @media (max-width: 399px)
+    margin-bottom: 60px
 
 h3
   font-size: 1em
@@ -175,9 +225,9 @@ p
 
 
 .button
-  width: 400px
+  width: 75%
+  max-width: 400px
   height: 60px
-  background: #ff6e5f
   color: white
   display: block
   border-radius: 5px
@@ -194,6 +244,13 @@ p
     +linear-gradient (#144b8b, #1f75aa)
     box-shadow: none
 
+  @media (max-width: 485px)
+    font-size: 1.4em
+    padding-top: 22px
+
+  @media (max-width: 399px)
+    display: none
+
 .info
   +clearfix
 
@@ -201,6 +258,13 @@ p
   width: 25%
   float: left
   padding: 0 2%
+
+  @media (max-width: 620px)
+    float: none
+    width: 80%
+    margin: auto
+    padding: none
+
 
 
 .heart, .maintained, .lock, .free
